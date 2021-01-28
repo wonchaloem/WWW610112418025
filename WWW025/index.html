@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p data="A" >Pipat Haeprakhon</p>
+    <p id="btn">IT</p>
+    <p data="B" class="sel">BRU</p>
+
+    <button id="menu_member">MEMBER</button>
+    <div id="div_content"></div>
+</body>
+</html>
+
+<script src="./js/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+<script>
+$(function(){
+    //alert();
+    $("#btn").css("color","blue");
+    $("p").html("KAK");
+
+    $("p").click(function(){
+        
+        let val = $(this).attr("data");
+        alert(val);
+    });
+
+
+    $("#menu_member").click(function(){ 
+        $("#div_content").load("./views/member.php");
+     });
+     
+     
+});
+</script>
+
+
